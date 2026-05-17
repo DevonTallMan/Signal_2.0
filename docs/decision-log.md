@@ -29,6 +29,7 @@ Decisions taken during early planning conversations (before this log existed) ha
 | D-010 | 17 May 2026 | Phase 1 starts 18 May 2026 | Active |
 | D-011 | 17 May 2026 | Success completion metric: "exam section reached" | Active |
 | D-012 | 17 May 2026 | New repo Signal 2.0, old Signal repo to be archived | Active |
+| D-013 | 17 May 2026 | Project reframed as academic exercise with ship-ready foundation | Active, against PM recommendation |
 
 ---
 
@@ -113,6 +114,43 @@ Decisions taken during early planning conversations (before this log existed) ha
 **Decision:** Fresh repository Signal 2.0. Old Signal repo to be archived once Signal 2.0 reaches a stable URL.
 **Reasoning:** Clean slate is part of the POC validity. New ICO registration, privacy notice, and DPIA scope match the new project rather than carrying over old compliance context.
 
+### D-013: Project reframed as academic exercise
+
+**Date:** 17 May 2026
+**Status:** Active, against PM recommendation
+
+**Context:** Mid-planning, the project owner clarified that Signal 2.0 is currently an academic exercise in self-study of AI-assisted project management, with a secondary aim of producing artefacts that could form the foundation of an actual production POC should the owner choose to ship at a later date. Phase 1 (legal foundation) is no longer required for compliance purposes because no real data processing will occur in the current scope.
+
+**Options considered:**
+1. Stick to parallel-track schedule with Phase 1 alongside Phase 2 (PM recommendation prior to context reveal)
+2. Parallelise harder, pulling migration into Sprint 1
+3. Skip Phase 1 entirely and run implementation as a study exercise, preserving Phase 1 artefacts as deferred work
+
+**Decision:** Option 3.
+
+**Reasoning:** No live data subjects, no actual regulatory exposure, no real contractual conflict during the academic-exercise phase. The PM artefacts themselves (charter, decision log, risk register, DPIA draft, Gantt, sprint plans) are the primary deliverable for personal learning. The technical implementation of Phase 2 onwards remains production-quality so that future activation does not require a full rebuild.
+
+**Implications:**
+- Charter Section 0 added (project context and operating mode), with re-activation triggers explicitly defined
+- v1.1 notes inserted throughout the charter where production-state content needed qualification
+- Risk register R-001, R-007, R-013 reclassified from Open to Deferred (study context)
+- Phase 1 work prioritised by learning value rather than compliance need
+- Phase 2 implementation may proceed without Phase 1 prerequisites in academic-exercise mode
+
+**Risks accepted (deferred state):**
+- R-001: GDPR exposure as sole data controller. Deferred while no data is processed.
+- R-007: Contract clause unverified. Deferred while no platform activity targets students.
+- R-013: ICO investigation exposure. Deferred while no processing occurs.
+
+**Re-activation triggers (any of these returns the project to production state and reactivates the deferred risks):**
+- Inviting any external user to the platform
+- Sharing a public URL with anyone outside the project owner
+- Adding analytics that identify or fingerprint visitors
+- Any commercial activity targeting students
+
+**Owner:** Chris Cross
+**PM position:** Did not recommend the override prior to the academic-exercise context being revealed. No objection given the new context.
+
 ---
 
 ## Change log
@@ -120,3 +158,4 @@ Decisions taken during early planning conversations (before this log existed) ha
 | Date | Author | Change |
 |---|---|---|
 | 17 May 2026 | PM | Initial log created, twelve historical decisions backfilled |
+| 17 May 2026 | PM | D-013 appended (project reframed as academic exercise) |
